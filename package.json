@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "launch": "node app.js"
+    "launch": "node app.js",
+    "heroku-postbuild": "yarn --production=false && yarn run build"
   },
   "proxy": "http://localhost:5000"
 }
