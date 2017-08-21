@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "cd views && yarn build",
+    "install-react": "cd views && yarn install",
+    "setup": "yarn install && yarn install-react",
+    "react-dev": "cd views && yarn start",
+    "react-test": "cd views && yarn test"
+  },
+  "engine": {
+    "node": "8.x"
   },
   "keywords": [],
   "author": "",
