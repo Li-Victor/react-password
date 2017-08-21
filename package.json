@@ -4,18 +4,15 @@
   "private": true,
   "dependencies": {
     "express": "^4.15.4",
-    "password-generator": "^2.1.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11"
+    "password-generator": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "launch": "node app.js",
-    "heroku-postbuild": "yarn --production=false && yarn run build"
-  },
-  "proxy": "http://localhost:5000"
+    "start": "node app.js",
+    "build": "cd views && yarn build",
+    "install-react": "cd views && yarn install",
+    "setup": "yarn install && yarn install-react",
+    "react-dev": "cd views && yarn start",
+    "react-test": "cd views && yarn test",
+    "heroku-postbuild": "cd views && yarn --production=false && yarn run build"
+  }
 }

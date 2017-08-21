@@ -5,7 +5,7 @@ const generatePassword = require('password-generator');
 const app = express();
 
 //Serve static files from the React app
-app.use(express.static(path.join(__dirname, '/build')));
+app.use(express.static(path.join(__dirname, '/views/build')));
 
 //Put all API endpoints under '/api'
 app.get('/api/passwords', (req, res) => {
@@ -22,7 +22,7 @@ app.get('/api/passwords', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname + '/build/index.html'));
+	res.sendFile(path.join(__dirname + '/views/build/index.html'));
 });
 
 const port = process.env.PORT || 5000;
